@@ -17,7 +17,6 @@ public class ImagePoke {
 		try {
 			Fond2=ImageIO.read(new File("src/main/java/img/pokemon3.png"));
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		Fond=new ImageIcon(new ImageIcon("src/main/java/img/pokemon3.png").getImage()
@@ -38,7 +37,7 @@ public class ImagePoke {
 		BulleDroite= new ImageIcon(new ImageIcon("src/main/java/img/bulleDroite.png").getImage()
 				.getScaledInstance
 				(200, 80,Image.SCALE_DEFAULT));
-		BarreHP= new ImageIcon(new ImageIcon("src/main/java/img/lifebarTest.png").getImage()
+		BarreHP= new ImageIcon(new ImageIcon("src/main/java/img/hp/hp5.png").getImage()
 				.getScaledInstance
 				(100, 15,Image.SCALE_DEFAULT));
 	}

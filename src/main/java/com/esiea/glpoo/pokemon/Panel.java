@@ -23,9 +23,9 @@ public class Panel extends JPanel{
 		JLabel pokemon2 = new JLabel(picture.Pokemon2);
 		JLabel bulleG = new JLabel(picture.BulleGauche);
 		JLabel bulleD = new JLabel(picture.BulleDroite);
-		JLabel barreHP =new JLabel(picture.BarreHP);
+		JLabel barreHP = new JLabel(picture.BarreHP);
 		JButton attaque = new JButton("Attaque !");
-		this.setLayout( null);
+		this.setLayout(null);
 		//mainPanel.setLayout( new FlowLayout(FlowLayout.RIGHT));
 		//mainPanel.setOpaque(false);
 		pokemon1.setBounds(60, 200,240,240);
@@ -33,14 +33,14 @@ public class Panel extends JPanel{
 		bulleG.setBounds(80, -20, 240, 240);
 		bulleD.setBounds(300, 200, 240, 240);
 		attaque.setBounds(400, 400, 90, 50);
-		barreHP.setBounds(340, 100, 200, 500);
+		barreHP.setBounds(300, 200, 300, 260);
 		//mainPanel.add(pokemon1);
+		this.add(barreHP);
 		this.add(pokemon1);
 		this.add(pokemon2);
 		this.add(attaque);
 		this.add(bulleG);
 		this.add(bulleD);
-		this.add(barreHP);
 		//this.setLayout(new BorderLayout());
 		//this.add(mainPanel,BorderLayout.PAGE_END);
 		//this.add(score,BorderLayout.);

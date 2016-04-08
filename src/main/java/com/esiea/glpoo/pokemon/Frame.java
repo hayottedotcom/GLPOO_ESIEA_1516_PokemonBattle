@@ -18,13 +18,13 @@ public class Frame {
 	Panel panel=new Panel(fond.Fond2);
     fenetre = new JFrame("Pokemon");
     //fenetre.setContentPane(new JLabel(fond.Fond));
-    fenetre.setSize(640,480 );
+    fenetre.setSize(640,480);
     fenetre.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     fenetre.setContentPane(panel);
 	//fenetre.pack();
     fenetre.setFocusable(false);
     fenetre.setResizable(false);
 	fenetre.setVisible(true);
-}
+	}
 
 }
