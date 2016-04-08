@@ -19,6 +19,7 @@ public class Frame {
     fenetre = new JFrame("Pokemon");
     //fenetre.setContentPane(new JLabel(fond.Fond));
     fenetre.setSize(640,480 );
+    fenetre.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     fenetre.setContentPane(panel);
 	//fenetre.pack();
     fenetre.setFocusable(false);
