@@ -24,6 +24,7 @@ public class Panel extends JPanel{
 		JLabel bulleG = new JLabel(picture.BulleGauche);
 		JLabel bulleD = new JLabel(picture.BulleDroite);
 		JLabel barreHP = new JLabel(picture.BarreHP);
+		JLabel vsImg = new JLabel(picture.VsImg);
 		JButton attaque = new JButton("Attaque !");
 		this.setLayout(null);
 		//mainPanel.setLayout( new FlowLayout(FlowLayout.RIGHT));
@@ -34,7 +35,9 @@ public class Panel extends JPanel{
 		bulleD.setBounds(300, 200, 240, 240);
 		attaque.setBounds(400, 400, 90, 50);
 		barreHP.setBounds(300, 200, 300, 260);
+		vsImg.setBounds(115, 135, 400, 144);
 		//mainPanel.add(pokemon1);
+		this.add(vsImg);
 		this.add(barreHP);
 		this.add(pokemon1);
 		this.add(pokemon2);

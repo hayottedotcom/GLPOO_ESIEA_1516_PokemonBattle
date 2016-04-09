@@ -10,21 +10,17 @@ import javax.swing.ImageIcon;
 
 
 public class ImagePoke {
-	public ImageIcon Fond,Pokemon1,Pokemon2,BulleGauche,BulleDroite,BarreHP;
+	public ImageIcon Fond,Pokemon1,Pokemon2,BulleGauche,BulleDroite,BarreHP,VsImg;
 	BufferedImage Fond2;
 	ImagePoke(){
-		
 		try {
 			Fond2=ImageIO.read(new File("src/main/java/img/pokemon3.png"));
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		Fond=new ImageIcon(new ImageIcon("src/main/java/img/pokemon3.png").getImage()
+		Fond= new ImageIcon(new ImageIcon("src/main/java/img/pokemon3.png").getImage()
 			.getScaledInstance
 			(640, 480,Image.SCALE_DEFAULT));
-	
-	
-	
 		Pokemon1= new ImageIcon(new ImageIcon("src/main/java/img/rondoudou.png").getImage()
 				.getScaledInstance
 				(300, 300,Image.SCALE_DEFAULT));
@@ -40,6 +36,9 @@ public class ImagePoke {
 		BarreHP= new ImageIcon(new ImageIcon("src/main/java/img/hp/hp5.png").getImage()
 				.getScaledInstance
 				(100, 15,Image.SCALE_DEFAULT));
+		VsImg= new ImageIcon(new ImageIcon("src/main/java/img/vs.png").getImage()
+				.getScaledInstance
+				(400, 144,Image.SCALE_DEFAULT));
 	}
 
 }

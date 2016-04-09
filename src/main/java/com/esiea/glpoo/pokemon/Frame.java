@@ -1,5 +1,6 @@
 package com.esiea.glpoo.pokemon;
 
+import java.awt.Dimension;
 import java.io.File;
 import java.io.IOException;
 
@@ -26,5 +27,10 @@ public class Frame {
     fenetre.setResizable(false);
 	fenetre.setVisible(true);
 	}
+	public Dimension getFenetreSize() {
+		return fenetre.getSize();
+	}
+	
+	
 
 }
