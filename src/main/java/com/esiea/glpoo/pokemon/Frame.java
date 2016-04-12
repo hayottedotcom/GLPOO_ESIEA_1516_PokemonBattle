@@ -13,7 +13,7 @@ import javax.swing.JLabel;
 
 public class Frame {
 	Panel panel;
-	ImagePoke fond= new ImagePoke.getInstance();
+	ImagePoke fond= ImagePoke.getInstance();
 	JFrame fenetre;
 	Frame(){
 	panel=new Panel(fond.Fond2); // fond ou Fond ???
