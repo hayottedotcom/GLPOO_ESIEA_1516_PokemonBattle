@@ -5,5 +5,6 @@ public class main {
 		System.out.println("Coucou!");
 		new Frame();
 		new Pokemon();
+		new LoadExcel();
 	}
 }
