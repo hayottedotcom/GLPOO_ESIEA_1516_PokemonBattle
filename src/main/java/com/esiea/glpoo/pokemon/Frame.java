@@ -13,10 +13,10 @@ import javax.swing.JLabel;
 
 public class Frame {
 	Panel panel;
-	ImagePoke fond= new ImagePoke();
+	ImagePoke fond= new ImagePoke.getInstance();
 	JFrame fenetre;
 	Frame(){
-	panel=new Panel(fond.Fond2);
+	panel=new Panel(fond.Fond2); // fond ou Fond ???
     fenetre = new JFrame("Pokemon");
     //fenetre.setContentPane(new JLabel(fond.Fond));
     fenetre.setSize(640,480);
