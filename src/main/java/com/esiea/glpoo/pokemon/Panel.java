@@ -17,13 +17,17 @@ public class Panel extends JPanel{
 	private Image image;
 	Pokemon poke;
 	ImagePoke picture= new ImagePoke();
-	LoadExcel boule= new LoadExcel();
+	//LoadExcel boule= new LoadExcel();
 	BoutonAttaque bAttaque=new BoutonAttaque();
 	static JLabel score;
 	
 	static JLabel boule1;
 	static JLabel boule2;
 	static JLabel vsImg;
+	static JLabel nombreHP1;
+	static JLabel nombreHP2;
+	static JLabel barreHP1;
+	static JLabel barreHP2;
 	
 	Panel(){
 		
@@ -34,19 +38,21 @@ public class Panel extends JPanel{
 		//----------Déclaration éléments
 		JLabel nomPokemon1 = new JLabel("Rondoudou :");
 		JLabel nomPokemon2 = new JLabel("Pikachu :");
-		boule1 = new JLabel (boule.boule1.replaceAll(".0", ""));
-		boule2 = new JLabel (boule.boule2.replaceAll(".0", ""));
+		boule1 = new JLabel ();
+		boule2 = new JLabel ();
 		Font font = new Font("Arial",Font.BOLD,30);
 		boule1.setFont(font);
 		boule2.setFont(font);
+		JLabel blueBall = new JLabel(picture.blueBalls);
+		JLabel redBall = new JLabel(picture.redBalls);
 		JLabel pokemon1 = new JLabel(picture.Pokemon1);
 		JLabel pokemon2 = new JLabel(picture.Pokemon2);
 		JLabel bulleG = new JLabel(picture.BulleGauche);
 		JLabel bulleD = new JLabel(picture.BulleDroite);
-		JLabel barreHP1 = new JLabel(picture.BarreHP);
-		JLabel barreHP2 = new JLabel(picture.BarreHP);
-		JLabel nombreHP1 = new JLabel("100/100");
-		JLabel nombreHP2 = new JLabel("100/100");
+		barreHP1 = new JLabel(picture.BarreHP1);
+		barreHP2 = new JLabel(picture.BarreHP1);
+		nombreHP1 = new JLabel("100/100");
+		nombreHP2 = new JLabel("100/100");
 		vsImg = new JLabel(picture.VsImg);
 		this.setLayout(null);
 		//mainPanel.setLayout( new FlowLayout(FlowLayout.RIGHT));
@@ -61,19 +67,24 @@ public class Panel extends JPanel{
 		barreHP2.setBounds(65, -20, 300, 260);
 		nombreHP1.setBounds(450, 185, 300, 260);
 		nombreHP2.setBounds(215, -35, 300, 260);
+		blueBall.setBounds(310, 145, 300, 260);
+		redBall.setBounds(80, -75, 300, 260);
 		vsImg.setBounds(115, 135, 400, 144);
 		nomPokemon1.setBounds(115, -50, 300, 260);
 		nomPokemon2.setBounds(350, 170, 300, 260);
 		boule1.setBounds(170, 130, 400, 144);
 		boule2.setBounds(426, 133, 400, 144);
 		//mainPanel.add(pokemon1);
-		//------------
+		
+		//------------Visibilité éléments
 		
 		boule1.setVisible(false);
 		boule2.setVisible(false);
 		vsImg.setVisible(false);
 		
 		//------------Ajout Element dans le panel
+		this.add(blueBall);
+		this.add(redBall);
 		this.add(nombreHP1);
 		this.add(nombreHP2);
 		this.add(boule1);

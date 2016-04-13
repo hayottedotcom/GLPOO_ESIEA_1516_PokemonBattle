@@ -8,7 +8,7 @@ import javax.swing.JButton;
 
 public class BoutonAttaque implements ActionListener {
 	JButton attaque;
-	int etat=0;
+	int etat=0,tirage=1;
 	BoutonAttaque(){
 		attaque = new JButton("Attaque !");
 		attaque.setBounds(400, 400, 90, 50);
@@ -37,20 +37,21 @@ public class BoutonAttaque implements ActionListener {
 	}
 	public void actionPerformed(ActionEvent arg0) {
 		// TODO Auto-generated method stub
-		int cpt=9;
-		int etat=0;
 		
-		tempo();
-		
+		//tempo();
+		if(tirage>=6){
 		Panel.boule1.setVisible(true);
 		Panel.boule2.setVisible(true);
 		Panel.vsImg.setVisible(true);
-
+		//attaque.setVisible(false);
+		new Score();
 		/*	
 		Panel.boule1.setVisible(false);
 		Panel.boule2.setVisible(false);
 		Panel.vsImg.setVisible(false);*/
 		//cpt--;
+		}
+		//LoadExcel.nextBoule();
 		
 	}
 
