@@ -16,7 +16,7 @@ public class Panel extends JPanel{
 	JPanel mainPanel;
 	private Image image;
 	Pokemon poke;
-	ImagePoke picture= new ImagePoke();
+	ImagePoke picture= ImagePoke.getInstance();
 	LoadExcel boule= new LoadExcel();
 	BoutonAttaque bAttaque=new BoutonAttaque();
 	static JLabel score;
