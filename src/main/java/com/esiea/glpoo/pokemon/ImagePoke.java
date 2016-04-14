@@ -10,12 +10,11 @@ import javax.swing.ImageIcon;
 
 
 public class ImagePoke {
-	
-	private static ImagePoke instance = null;
-	
-	private ImageIcon Fond,Pokemon1,Pokemon2,BulleGauche,BulleDroite,BarreHP,VsImg;
+	public ImageIcon Fond,Pokemon1,Pokemon2,BulleGauche,BulleDroite,VsImg, blueBalls,redBalls,console,
+	nouveauTirage,victoire;
+	public ImageIcon[] BarreHP=new ImageIcon[21];
 	BufferedImage Fond2;
-	private ImagePoke(){
+	ImagePoke(){
 		try {
 			Fond2=ImageIO.read(new File("src/main/java/img/pokemon3.png"));
 		} catch (IOException e) {
@@ -36,19 +35,34 @@ public class ImagePoke {
 		BulleDroite= new ImageIcon(new ImageIcon("src/main/java/img/bulleDroite.png").getImage()
 				.getScaledInstance
 				(200, 80,Image.SCALE_DEFAULT));
-		BarreHP= new ImageIcon(new ImageIcon("src/main/java/img/hp/hp5.png").getImage()
-				.getScaledInstance
-				(100, 15,Image.SCALE_DEFAULT));
 		VsImg= new ImageIcon(new ImageIcon("src/main/java/img/vs.png").getImage()
 				.getScaledInstance
 				(400, 144,Image.SCALE_DEFAULT));
-	}
-	
-	public static ImagePoke getInstance(){
-		if(instance == null){
-			instance = new ImagePoke();
+		blueBalls= new ImageIcon(new ImageIcon("src/main/java/img/blueBalls.png").getImage()
+				.getScaledInstance
+				(100, 15,Image.SCALE_DEFAULT));
+		redBalls= new ImageIcon(new ImageIcon("src/main/java/img/redBalls.png").getImage()
+				.getScaledInstance
+				(100, 15,Image.SCALE_DEFAULT));
+		
+		console=new ImageIcon(new ImageIcon("src/main/java/img/console.png").getImage()
+				.getScaledInstance
+				(640, 80,Image.SCALE_DEFAULT));
+		nouveauTirage=new ImageIcon(new ImageIcon("src/main/java/img/nouveauTirage.png").getImage()
+				.getScaledInstance
+				(300, 160,Image.SCALE_DEFAULT));
+		victoire=new ImageIcon(new ImageIcon("src/main/java/img/victoryEnd.png").getImage()
+				.getScaledInstance
+				(300, 78,Image.SCALE_DEFAULT));
+		
+		
+		//---------BarreHP
+		for(int i=1;i<=20;i++){
+		BarreHP[i]= new ImageIcon(new ImageIcon("src/main/java/img/hp/hp"+i+".png").getImage()
+				.getScaledInstance
+				(100, 15,Image.SCALE_DEFAULT));
 		}
-		return instance;
+		
 	}
-	
+
 }

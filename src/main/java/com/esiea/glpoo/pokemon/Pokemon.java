@@ -4,7 +4,7 @@ import javax.swing.JLabel;
 
 public class Pokemon {
 	
-	ImagePoke image = ImagePoke.getInstance();
+	ImagePoke image = new ImagePoke();
 	JLabel pokemon1;
 	Pokemon(){
 		pokemon1 = new JLabel(image.Pokemon1);
