@@ -84,7 +84,7 @@ public class Panel extends JPanel{
 		vsImg.setBounds(115, 135, 400, 144);
 		nomPokemon1.setBounds(115, -50, 300, 260);
 		nomPokemon2.setBounds(350, 170, 300, 260);
-		boule1.setBounds(170, 130, 400, 144);
+		boule1.setBounds(170, 133, 400, 144);
 		boule2.setBounds(426, 133, 400, 144);
 		console.setBounds(20, 385, 400, 300);
 		Font font1=new Font("Courier New",Font.BOLD,12);

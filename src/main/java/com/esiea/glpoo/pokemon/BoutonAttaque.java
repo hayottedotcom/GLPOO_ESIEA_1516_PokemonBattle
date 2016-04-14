@@ -83,7 +83,7 @@ public class BoutonAttaque implements ActionListener {
 					e.printStackTrace();
 				}
 		        Musique.loto.stop();
-		        Musique.battle.start();
+		        Musique.battle.loop(100);
 		        attaque.setVisible(true);
 		 		temp=5;
 		 		vitesse=200;
