@@ -15,7 +15,7 @@ import javax.swing.JLabel;
 public class Frame{
 	static int cpt=3,vitesse=400;
 	Panel panel;
-	ImagePoke fond= new ImagePoke();
+	ImagePoke fond= ImagePoke.getInstance();
 	static JFrame fenetre;
 	static int etat=0;
 	

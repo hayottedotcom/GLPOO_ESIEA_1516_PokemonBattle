@@ -1,7 +1,7 @@
 package com.esiea.glpoo.pokemon;
 
 public class HpBarre {
-	ImagePoke image = new ImagePoke();
+	ImagePoke image = ImagePoke.getInstance();
 	HpBarre(){
 		int Hp1=Integer.parseInt(Panel.nombreHP1.getText().replaceAll("/100", ""));
 		int Hp2=Integer.parseInt(Panel.nombreHP2.getText().replaceAll("/100", ""));

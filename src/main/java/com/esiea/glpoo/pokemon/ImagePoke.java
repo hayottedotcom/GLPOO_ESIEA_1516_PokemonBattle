@@ -10,11 +10,14 @@ import javax.swing.ImageIcon;
 
 
 public class ImagePoke {
+	
+	private static ImagePoke instance = null;
+	
 	public ImageIcon Fond,Pokemon1,Pokemon2,BulleGauche,BulleDroite,VsImg, blueBalls,redBalls,console,
 	nouveauTirage,victoire;
 	public ImageIcon[] BarreHP=new ImageIcon[21];
 	BufferedImage Fond2;
-	ImagePoke(){
+	private ImagePoke(){
 		try {
 			Fond2=ImageIO.read(new File("src/main/java/img/pokemon3.png"));
 		} catch (IOException e) {
@@ -63,6 +66,13 @@ public class ImagePoke {
 				(100, 15,Image.SCALE_DEFAULT));
 		}
 		
+	}
+	
+	public static ImagePoke getInstance(){
+		if(instance == null){
+			instance = new ImagePoke();
+		}
+		return instance;
 	}
 
 }

@@ -17,7 +17,7 @@ public class Musique {
 			AudioInputStream audio_input;
 			audio_input = AudioSystem.getAudioInputStream(new File("src/main/java/sounds/battle.wav"));
 			battle.open(audio_input);
-			battle.loop(100);
+			battle.loop(10);
 			} catch (UnsupportedAudioFileException | IOException | LineUnavailableException e1) {
 				e1.printStackTrace();
 			}
