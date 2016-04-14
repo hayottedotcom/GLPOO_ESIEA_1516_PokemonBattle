@@ -83,7 +83,7 @@ public class BoutonAttaque implements ActionListener {
 					e.printStackTrace();
 				}
 		        Musique.loto.stop();
-		        Musique.battle.start();
+		        Musique.battle.loop(100);
 		        attaque.setVisible(true);
 		 		temp=5;
 		 		vitesse=200;
@@ -91,7 +91,6 @@ public class BoutonAttaque implements ActionListener {
 		 		if(tirage<=6){
 		 		new Score();
 		 		LoadExcel.nextBoule();
-
 		 		Panel.blueBall.setIcon(new ImageIcon(new ImageIcon("src/main/java/img/blueBalls-"+cpt+".png").getImage()
 		 				.getScaledInstance
 		 				(100, 15,Image.SCALE_DEFAULT)));
@@ -100,12 +99,12 @@ public class BoutonAttaque implements ActionListener {
 		 				(100, 15,Image.SCALE_DEFAULT)));
 		 		cpt++;
 		 		tirage++;
+		 		System.out.println(tirage);
 		 		}
 		 		else{
 		 			LoadExcel.setColonne();
-		 			cpt=0;
+		 			cpt=1;
 		 			tirage=1;
-		 			
 		 			Panel.blueBall.setIcon(new ImageIcon(new ImageIcon("src/main/java/img/blueBalls-"+cpt+".png").getImage()
 		 					.getScaledInstance
 		 					(100, 15,Image.SCALE_DEFAULT)));
